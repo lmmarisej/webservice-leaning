@@ -22,8 +22,9 @@ public class WebServiceServerTest {
         
         Server server = jaxWsServerFactoryBean.create();
         server.start();
-    
+        
         new CountDownLatch(1).await();
     }
+    
     
 }

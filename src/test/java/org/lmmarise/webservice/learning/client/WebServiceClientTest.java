@@ -61,7 +61,7 @@ public class WebServiceClientTest {
         JAXBContext jaxbContext = JAXBContext.newInstance(Book.class);
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         Book book = (Book) unmarshaller.unmarshal(new StringReader(xml));
-        System.out.println(book);
+        System.err.println(book);
     }
     
     
