@@ -12,4 +12,9 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     public String sayHello(String name, int age) {
         return "Hello " + name + ", you are " + age + " years old.";
     }
+    
+    @Override
+    public String sayHi(String name, int age) {
+        return "Hi " + name + ", you are " + age + " years old.";
+    }
 }

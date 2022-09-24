@@ -11,7 +11,7 @@ import org.lmmarise.webservice.lening.service.HelloWorldService;
 public class WebServiceClientTest {
 
     @Test
-    public void client() {
+    public void sayHello() {
         JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
         jaxWsProxyFactoryBean.setAddress("http://localhost:9999/cxf_server");
         jaxWsProxyFactoryBean.setServiceClass(HelloWorldService.class);
@@ -20,5 +20,17 @@ public class WebServiceClientTest {
     
         System.out.println(helloWorldService.sayHello("cxk", 2));
     }
-
+    
+    @Test
+    public void sayHi() {
+        JaxWsProxyFactoryBean jaxWsProxyFactoryBean = new JaxWsProxyFactoryBean();
+        jaxWsProxyFactoryBean.setAddress("http://localhost:9999/cxf_server");
+        jaxWsProxyFactoryBean.setServiceClass(HelloWorldService.class);
+        
+        HelloWorldService helloWorldService = (HelloWorldService) jaxWsProxyFactoryBean.create();
+        
+        System.out.println(helloWorldService.sayHi("cxk", 2));
+    }
+    
+    
 }
