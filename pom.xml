@@ -46,6 +46,10 @@
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
             <version>3.5.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
